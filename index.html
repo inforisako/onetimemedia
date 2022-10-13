@@ -23,7 +23,33 @@
           </ul>
         </div>
       </nav>
+        
+           <section class="header">
+            <div class="logo-title">
+              <h2>Mode Change</h2>
+            </div>
+      
+            <img src="./images/moon.png" id="icon" />
+           </section>
+      
+           
+           
+      
+           <script>
+            var icon = document.querySelector("#icon");
+      
+            icon.onclick = () => {
+              document.body.classList.toggle("dark-mode");
+              if (document.body.classList.contains("dark-mode")) {
+                icon.src = "./images/sun.png";
+              } else {
+                icon.src = "./images/moon.png";
+              }
+            };
+           </script>
+       
 
+      
       <div class="toggle-btn">
         <span></span>
         <span></span>
@@ -32,11 +58,58 @@
 
       <div id="mask"></div>
     </div>
+    <div class="contact-form">
+      <p class="title">ご予約はこちら</p>
+  
+      <form action="https://api.staticforms.xyz/submit" method="post">
+        <input type="hidden" name="accessKey" value="01fea6a4-8949-418d-97ea-53c26ed6ff2b">
+        <input type="hidden" name="subject" value="Test">
+        <div class="item">
+          <label class="label">お名前</label>
+          <input type="text" class="inputs" name="name" required/>
+        </div>
+  
+        <div class="item">
+          <label class="label">メールアドレス</label>
+          <input type="email" class="inputs" name="email" />
+        </div>
+  
+        <div class="item">
+          <p class="label">ご予約席</p>
+          <div class="inputs">
+            <input id="s" type="radio" name="menu" value="s" /><label for="s"
+              >S席</label
+            >
+            <input id="a" type="radio" name="menu" value="a" /><label for="a"
+              >A席</label
+            >
+            <input id="b" type="radio" name="menu" value="b" /><label for="b"
+              >B席</label
+            >
+          </div>
+        </div>
+  
+          <div class="item">
+            <label class="label">ご質問</label>
+            <textarea class="inputsf" placeholder="ご質問はこちら"></textarea>
+          </div>
+  
+          <div class="button-area">
+            <input type="submit" value="予約決定" />
+            <input type="reset" value="リセット" />
+          </div>
+        </div>
+      </form>
+  </div>
+
 
     <main>
       <h1>ONETIME MEDIA</h1>
     </main>
 
+   
+  </div>
     <script src="onetimemedia.js"></script>
   </body>
+      
 </html>
