@@ -1,0 +1,136 @@
+body {
+  font-weight: 400;
+}
+
+main {
+  padding: 50px;
+}
+
+main h1 {
+  font-weight: 400;
+  text-align: center;
+}
+
+nav {
+  background-image: url("画像のパスを指定");
+  background-image: url("画像のパスを指定");
+  background-image: url("画像のパスを指定");
+  background-image: url("画像のパスを指定");
+  background-image: url("画像のパスを指定");
+  background-image: url("画像のパスを指定");
+  background-image: url("画像のパスを指定");
+  background-image: url("画像のパスを指定");
+  background-image: url("画像のパスを指定");
+  background-image: url("画像のパスを指定");
+  background-image: url("画像のパスを指定");
+  background-image: url("画像のパスを指定");
+  display: block;
+  position: fixed;
+  background-color: #ffffff;
+  width: 220px;
+  top: 0;
+  left: -300px;
+  bottom: 0;
+  transition: all 0.5s;
+  z-index: 3;
+  opacity: 0;
+}
+
+.open nav {
+  left: 0;
+  opacity: 1;
+}
+
+nav .inner {
+  padding: 25px;
+}
+
+nav .inner ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav .inner ul li {
+  margin: 0;
+  border-bottom: 1px solid #333;
+}
+
+nav .inner ul li a {
+  display: block;
+  color: #333;
+  font-size: 14px;
+  padding: 1rem;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+nav .inner ul li a:hover {
+  background: #e4e4e4;
+}
+
+.toggle-btn {
+  display: block;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.toggle-btn span {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  transition: all 0.5s;
+  border-radius: 4px;
+}
+
+.toggle-btn span:nth-child(1) {
+  top: 4px;
+}
+.toggle-btn span:nth-child(2) {
+  top: 14px;
+}
+.toggle-btn span:nth-child(3) {
+  bottom: 4px;
+}
+
+.open .toggle-btn span {
+  background-color: #fff;
+}
+
+.open .toggle-btn span:nth-child(1) {
+  transform: translateY(10px) rotate(-315deg);
+}
+
+.open .toggle-btn span:nth-child(2) {
+  opacity: 0;
+}
+
+.open .toggle-btn span:nth-child(3) {
+  transform: translateY(-10px) rotate(315deg);
+}
+
+#mask {
+  display: none;
+  transition: all 0.5s;
+}
+
+.open #mask {
+  display: block;
+  background: #000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  opacity: 0.8;
+  z-index: 2;
+  cursor: pointer;
+}
